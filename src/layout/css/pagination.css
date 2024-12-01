@@ -1,0 +1,70 @@
+.pagination {
+    display: flex;
+    justify-content: right;
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+.pagination .page-link {
+    display: block;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #ddd;
+    cursor: not-allowed;
+}
+
+.pagination-previous {
+    font-size: 24px; /* Größe des Symbols "<" */
+    width: 40px;     /* Optionale Breite */
+    height: 40px;    /* Optionale Höhe */
+    display: flex;   /* Zentrierung */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #f0f0f0; /* Optionaler Hintergrund */
+    border-radius: 4px;        /* Abgerundete Ecken */
+    border: 1px solid #ccc;    /* Optionaler Rahmen */
+}
+
+.pagination-previous:hover {
+    background-color: #e0e0e0; /* Hover-Effekt */
+}
+
+@media (max-width: 768px) {
+    .pagination {
+        flex-wrap: wrap; /* Umbrechen der Pagination-Elemente */
+        font-size: 14px; /* Verkleinert die Schrift */
+    }
+
+    .pagination li a {
+        padding: 8px 10px; /* Verkleinert die Abstände */
+    }
+}
+
+.pagination-container {
+    display: flex; /* Für Flexbox-Anordnung */
+    justify-content: center; /* Zentrieren der Pagination */
+    padding: 10px;
+}
+
+
+

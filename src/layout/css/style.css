@@ -1,0 +1,320 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background: #FFFBED;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.popup{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-59%, -50%);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0);
+    border-radius: 10px;
+}
+.popup .close-btn {
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor:pointer;
+}
+.page-content{
+    margin-top: 0;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    
+  }
+  
+  .banner .banner-image {
+    order: 2; /* Change the order to place the image on the right */
+   
+  }
+  
+  .banner .banner-content {
+    
+    /*padding: 20px;  Adjust padding as needed */
+    position: relative;
+  }
+  .banner .banner-login {
+    text-align: center;
+    order: -2;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .banner {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+  
+  }
+  
+  /* sidebar */
+  #wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+  
+  #sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #f2f2f4;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  
+  #page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+  }
+  
+  #wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+  }
+  
+  .fixed-brand {
+    width: auto;
+  }
+  /* Sidebar Styles */
+  
+  .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 2px;
+  }
+  
+  .sidebar-nav li {
+    text-indent: 15px;
+    line-height: 40px;
+  }
+  
+  .sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #110f0f;
+  }
+  
+  .sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #171515;
+    background: rgba(248, 248, 19, 0.2);
+    border-left: rgb(249, 247, 199) 2px solid;
+  }
+  
+  .sidebar-nav li a:active,
+  .sidebar-nav li a:focus {
+    text-decoration: none;
+  }
+  
+  .sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+  }
+  
+  .sidebar-nav > .sidebar-brand a {
+    color: #999999;
+  }
+  
+  .sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+  }
+  
+  .no-margin {
+    margin: 0;
+  }
+  .sidebar-wrapper  > image{
+    text-align: left;
+  }
+  
+  .btn-space{
+    margin-right: 5px;
+  }
+  .form-spacing {
+    margin-bottom: 5px; /* Adjust as needed */
+}
+  
+  @media(min-width:768px) {
+    #wrapper {
+      padding-left: 250px;
+    }
+    .fixed-brand {
+      width: 250px;
+    }
+    #wrapper.toggled {
+      padding-left: 0;
+    }
+   
+    #wrapper.toggled #sidebar-wrapper {
+      width: 110px;
+    }
+    #wrapper.toggled-2 #sidebar-wrapper {
+      width: 150px;
+    }
+    #wrapper.toggled-2 #sidebar-wrapper:hover {
+      width: 110px;
+    }
+    #page-content-wrapper {
+      padding: 20px;
+      position: relative;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+    #wrapper.toggled #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+      padding-left: 250px;
+    }
+    #wrapper.toggled-2 #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+      margin-left: -200px;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+  }
+
+/* Top Menu*/
+  .me-auto {
+    margin-left: auto !important;
+  }
+  .my-2 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 2.5rem !important;
+    
+  }
+  .my-lg-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-right: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  .navbar-nav-scroll {
+    max-height: var(--bs-scroll-height, 75vh);
+    overflow-y: auto;
+  }  
+
+  .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .my-lg-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .navbar {
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    --bs-navbar-nav-link-padding-x:1.5rem;
+    --bs-navbar-toggler-padding-y: 1.25rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+  }
+  
+.shadow{
+  box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15) !important;
+}
+  
+
+/* card on GamePage User*/
+.border-left-primary {
+  border-left: .25rem solid #4e73df !important;
+}
+
+.border-left-success {
+  border-left: .25rem solid #1cc88a !important;
+}
+
+.border-left-info {
+  border-left: .25rem solid #36b9cc !important;
+}
+
+.border-left-warning {
+  border-left: .25rem solid #f6c23e !important;
+}
+
+.text-xs {
+  font-size: .7rem;
+}
+
+
